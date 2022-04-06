@@ -16,6 +16,7 @@
         <module>rookie-springcloud-eureka-producer</module>
         <module>rookie-springcloud-eureka-consumer</module>
         <module>rookie-eureka-payment</module>
+        <module>rookie-eureka-order-consumer</module>
     </modules>
 
 
@@ -27,11 +28,11 @@
         <spring.boot.version>2.5.5</spring.boot.version>
         <hutool.version>5.7.4</hutool.version>
 
-        <junit.version>4.12</junit.version>
-        <log4j.version>1.2.17</log4j.version>
-        <lombok.version>1.16.18</lombok.version>
+        <junit.version>4.13.2</junit.version>
+<!--        <log4j.version>1.2.17</log4j.version>-->
+        <lombok.version>1.18.22</lombok.version>
         <mysql.version>5.1.47</mysql.version>
-        <druid.version>1.1.16</druid.version>
+        <druid.version>1.2.8</druid.version>
         <mybatis.spring.boot.version>2.2.0</mybatis.spring.boot.version>
     </properties>
 
@@ -80,11 +81,11 @@
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
             </dependency>
-            <dependency>
+<!--            <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -95,6 +96,7 @@
     </dependencyManagement>
 
     <build>
+       <!-- <finalName>你的工程名称</finalName>-->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

@@ -3,6 +3,7 @@ package com.rookie.bigdata.service.impl;
 import com.rookie.bigdata.dao.PaymentDao;
 import com.rookie.bigdata.entities.Payment;
 import com.rookie.bigdata.service.PaymentService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -17,7 +18,7 @@ import javax.annotation.Resource;
 @Service
 public class PaymentServiceImpl implements PaymentService {
 
-    @Resource
+    @Autowired
     private PaymentDao paymentDao;
 
     public int create(Payment payment) {
