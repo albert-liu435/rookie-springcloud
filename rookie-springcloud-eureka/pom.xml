@@ -15,8 +15,9 @@
         <module>rookie-springcloud-eureka-server</module>
         <module>rookie-springcloud-eureka-producer</module>
         <module>rookie-springcloud-eureka-consumer</module>
-        <module>rookie-eureka-payment</module>
+        <module>rookie-eureka-payment-provider</module>
         <module>rookie-eureka-order-consumer</module>
+        <module>rookie-eureka-server</module>
     </modules>
 
 
