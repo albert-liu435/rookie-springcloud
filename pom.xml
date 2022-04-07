@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>rookie-springcloud-eureka</module>
+        <module>rookie-springcloud-zookeeper</module>
     </modules>
 
     <properties>
