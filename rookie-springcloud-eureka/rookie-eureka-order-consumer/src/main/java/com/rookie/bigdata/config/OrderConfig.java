@@ -16,6 +16,7 @@ public class OrderConfig {
 
 
     @Bean
+
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
