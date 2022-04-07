@@ -21,10 +21,9 @@ import org.springframework.web.client.RestTemplate;
 public class OrderController {
 
     protected final Logger log = LoggerFactory.getLogger(OrderController.class);
-
-    public static final String PAYMENT_URL = "http://localhost:8001";
-
-    //public static final String PAYMENT_URL = "http://ROOKIE-EUREKA-PAYMENT";
+    //public static final String PAYMENT_URL = "http://localhost:8001";
+    // @LoadBalanced负载均衡
+    public static final String PAYMENT_URL = "http://ROOKIE-EUREKA-PAYMENT";
 
     @Autowired
     private RestTemplate restTemplate;
@@ -40,6 +39,9 @@ public class OrderController {
     //@GetMapping("/consumer/payment/get/{id}")
     @GetMapping(value = "/consumer/payment/get/{id}", produces = "application/json; charset=utf-8")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
+
+
+
         return restTemplate.getForObject(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
     }
 
