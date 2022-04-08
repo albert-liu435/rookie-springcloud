@@ -12,7 +12,7 @@
         <module>rookie-springcloud-eureka</module>
         <module>rookie-springcloud-zookeeper</module>
         <module>rookie-springcloud-consul</module>
-        <module>rookie-springcloud-ribbon</module>
+        <module>rookie-springcloud-loadbalance</module>
     </modules>
 
     <properties>
