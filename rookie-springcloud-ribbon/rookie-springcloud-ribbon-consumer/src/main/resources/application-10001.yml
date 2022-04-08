@@ -1,0 +1,14 @@
+server:
+  port: 10001 #指定运行端口
+spring:
+  application:
+    name: eureka-consumer #指定服务名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.server8761.com:8761/eureka/,http://eureka.server8762.com:8762/eureka/,http://eureka.server8763.com:8763/eureka/
+
+
+logging:
+  level:
+    root: info
