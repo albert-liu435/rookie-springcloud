@@ -11,6 +11,7 @@
     <modules>
         <module>rookie-springcloud-eureka</module>
         <module>rookie-springcloud-zookeeper</module>
+        <module>rookie-springcloud-consul</module>
     </modules>
 
     <properties>
