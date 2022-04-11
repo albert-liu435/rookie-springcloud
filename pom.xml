@@ -15,6 +15,7 @@
         <module>rookie-springcloud-loadbalance</module>
         <module>rookie-springcloud-openFeign</module>
         <module>rookie-springcloud-hystrix</module>
+        <module>rookie-springcloud-gateway</module>
     </modules>
 
     <properties>
