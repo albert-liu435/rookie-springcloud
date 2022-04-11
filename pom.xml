@@ -13,6 +13,7 @@
         <module>rookie-springcloud-zookeeper</module>
         <module>rookie-springcloud-consul</module>
         <module>rookie-springcloud-loadbalance</module>
+        <module>rookie-springcloud-openFeign</module>
     </modules>
 
     <properties>
