@@ -16,6 +16,7 @@
         <module>rookie-springcloud-openFeign</module>
         <module>rookie-springcloud-hystrix</module>
         <module>rookie-springcloud-gateway</module>
+        <module>rookie-springcloud-config</module>
     </modules>
 
     <properties>
