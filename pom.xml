@@ -19,6 +19,7 @@
         <module>rookie-springcloud-config</module>
         <module>rookie-springcloud-bus</module>
         <module>rookie-springcloud-stream</module>
+        <module>rookie-springcloud-sleuth</module>
     </modules>
 
     <properties>

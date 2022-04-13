@@ -1,0 +1,35 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: rookie-eureka-payment
+
+  zipkin:
+    base-url: http://localhost:9411
+    sender:
+      type: web
+  sleuth:
+    sampler:
+    #采样率值介于 0 到 1 之间，1 则表示全部采集
+    probability: 1
+
+
+eureka:
+  instance:
+    instance-id: rookie-payment-provider
+  #  instance:
+#    prefer-ip-address: true
+  client:
+    #表示是否将自己注册进EurekaServer默认为true。
+    register-with-eureka: true
+    #是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetchRegistry: true
+    service-url:
+      #单机版
+      defaultZone: http://eureka-server.dev.com:8761/eureka
+      #defaultZone: ${EUREKA_DEFAULT_ZONE:http://eureka-server.dev.com:8761/eureka}
+      # 集群版
+      #defaultZone: http://eureka.server8761.com:8761/eureka/,http://eureka.server8762.com:8762/eureka/,http://eureka.server8763.com:8763/eureka/
+
+
+
