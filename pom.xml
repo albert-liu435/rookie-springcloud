@@ -17,6 +17,7 @@
         <module>rookie-springcloud-hystrix</module>
         <module>rookie-springcloud-gateway</module>
         <module>rookie-springcloud-config</module>
+        <module>rookie-springcloud-bus</module>
     </modules>
 
     <properties>

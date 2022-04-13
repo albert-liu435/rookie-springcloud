@@ -1,0 +1,52 @@
+server:
+  port: 3344 #指定运行端口
+spring:
+  application:
+    name: rookie-config-center #指定服务名称
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/albert-liu435/spring-cloud-config #GitHub上面的git仓库名字
+          ####搜索目录
+          search-paths:
+            - spring-cloud-config
+          username: liuxili01
+          password: Liu130435
+      ####读取分支
+      label: main
+  #RabbitMQ相关支持
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    stream:
+      username: guest
+      password: guest
+
+eureka:
+  instance:
+    instance-id: rookie-bus-center
+  #  instance:
+  #    prefer-ip-address: true
+  client:
+    #表示是否将自己注册进EurekaServer默认为true。
+    register-with-eureka: true
+    #是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetchRegistry: true
+    service-url:
+      #单机版
+      defaultZone: http://eureka-server.dev.com:8761/eureka
+      #defaultZone: ${EUREKA_DEFAULT_ZONE:http://eureka-server.dev.com:8761/eureka}
+      # 集群版
+      #defaultZone: http://eureka.server8761.com:8761/eureka/,http://eureka.server8762.com:8762/eureka/,http://eureka.server8763.com:8763/eureka/
+
+##rabbitmq相关配置,暴露bus刷新配置的端点
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'busrefresh'
+
+
+
