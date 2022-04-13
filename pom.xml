@@ -18,6 +18,7 @@
         <module>rookie-springcloud-gateway</module>
         <module>rookie-springcloud-config</module>
         <module>rookie-springcloud-bus</module>
+        <module>rookie-springcloud-stream</module>
     </modules>
 
     <properties>
